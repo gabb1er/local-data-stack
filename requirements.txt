@@ -1,0 +1,8 @@
+apache-airflow
+apache-airflow-providers-amazon
+apache-airflow-providers-postgres
+airflow-providers-clickhouse
+airflow-clickhouse-plugin
+pandas
+minio
+kafka-python
