@@ -59,6 +59,7 @@ services:
       /bin/sh -c "
       sleep 10 &&
       mc alias set storage-minio http://storage-minio:9000 ${MINIO_ROOT_USER} ${MINIO_ROOT_PASSWORD} &&
+      mc mb storage-minio/datalake &&
       mc mb storage-minio/mlflow || true
       "
   # Clickhouse

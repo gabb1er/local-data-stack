@@ -22,6 +22,8 @@ I utilize it to test and implement innovative ideas and integrations effectively
 | WebLog Producer App |                       |                              | app-weblog-producer/docker-compose.yml |
 | TinyLLama API       |                       |                              | app-llm/docker-compose.yml             |
 
+TBD Superset, Datalens and Spark Standalone
+
 ## Architecture
 
 All services share
