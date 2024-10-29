@@ -1,0 +1,19 @@
+version: '3.8'
+
+networks:
+  local-stack-network:
+    name: local-stack-network
+    external: true
+
+services:
+  # Weblog Producer
+  app-weblog-producer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      KAFKA_BOOTSTRAP_SERVERS: service-kafka-broker:29092
+      KAFKA_TOPIC: weblog_events
+    networks:
+      - local-stack-network
+    restart: "always"

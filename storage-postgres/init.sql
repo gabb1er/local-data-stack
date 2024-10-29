@@ -1,4 +1,15 @@
+-- Create databases
+CREATE DATABASE mlflow;
+CREATE DATABASE store_db;
+CREATE DATABASE airflow;
 
+-- Grant privileges
+GRANT ALL PRIVILEGES ON DATABASE mlflow TO postgres_user;
+GRANT ALL PRIVILEGES ON DATABASE store_db TO postgres_user;
+GRANT ALL PRIVILEGES ON DATABASE airflow TO postgres_user;
+
+-- Setup store_db
+\c store_db
 CREATE TABLE Companies
 (
     cuit CHAR(11) PRIMARY KEY,

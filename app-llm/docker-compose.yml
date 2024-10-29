@@ -1,5 +1,13 @@
 version: '3.8'
 
+volumes:
+  huggingface-cache:
+
+networks:
+  local-stack-network:
+    name: local-stack-network
+    external: true
+
 services:
   vllm-inference:
     image: vllm/vllm-openai:latest
@@ -10,6 +18,8 @@ services:
       --tensor-parallel-size 1
       --gpu-memory-utilization 0.9
       --max-num-batched-tokens 8192
+    networks:
+      - local-stack-network
     ports:
       - "8000:8000"
     deploy:
@@ -30,5 +40,3 @@ services:
       timeout: 10s
       retries: 3
 
-volumes:
-  huggingface-cache:
