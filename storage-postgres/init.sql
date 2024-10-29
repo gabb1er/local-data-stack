@@ -1,12 +1,18 @@
 -- Create databases
 CREATE DATABASE mlflow;
-CREATE DATABASE store_db;
-CREATE DATABASE airflow;
-
--- Grant privileges
 GRANT ALL PRIVILEGES ON DATABASE mlflow TO postgres_user;
-GRANT ALL PRIVILEGES ON DATABASE store_db TO postgres_user;
+
+CREATE DATABASE airflow;
 GRANT ALL PRIVILEGES ON DATABASE airflow TO postgres_user;
+
+-- Datalens databases
+-- CREATE DATABASE datalens;
+-- GRANT ALL PRIVILEGES ON DATABASE datalens TO postgres_user;
+
+-- Application databases
+CREATE DATABASE store_db;
+GRANT ALL PRIVILEGES ON DATABASE store_db TO postgres_user;
+
 
 -- Setup store_db
 \c store_db

@@ -15,8 +15,10 @@ I utilize it to test and implement innovative ideas and integrations effectively
 | MinIO (S3)          | http://localhost:9001 | RELEASE.2024-01-29T03-56-32Z | docker-compose.yml                     |
 | Kafka               |                       | 7.2.1                        | storage-kafka/docker-compose.yml       |
 | MLflow              | http://localhost:5000 | v2.10.2                      | service-mlflow/docker-compose.yml      |
-| Airflow             | http://localhost:8080 | 2.9.3                        | service-airflow/docker-compose.yml     |
+| Airflow             | http://localhost:8081 | 2.9.3                        | service-airflow/docker-compose.yml     |
 | Redis               |                       | 7.2-bookworm                 | service-airflow/docker-compose.yml     |
+| JupyterLab          | http://localhost:8000 | 4.0.7 (latest of dockerhub)  | service-jupyterlab/docker-compose.yml  |
+| Trino               | http://localhost:8080 | 463                          | service-trino/docker-compose.yml       |
 | WebLog Producer App |                       |                              | app-weblog-producer/docker-compose.yml |
 | TinyLLama API       |                       |                              | app-llm/docker-compose.yml             |
 

@@ -1,0 +1,21 @@
+version: '3.8'
+
+networks:
+  local-stack-network:
+    name: local-stack-network
+    external: true
+
+services:
+  service-trino:
+    image: trinodb/trino:463
+    volumes:
+      - ./config:/etc/trino
+    networks:
+      - local-stack-network
+    ports:
+      - "8080:8080"
+#    command:
+#      - --server
+#      - "0.0.0.0:8080"
+#      - --catalog
+#      - storage-postgres

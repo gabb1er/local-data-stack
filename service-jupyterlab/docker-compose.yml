@@ -1,0 +1,26 @@
+version: '3.8'
+
+networks:
+  local-stack-network:
+    name: local-stack-network
+    external: true
+
+services:
+  service-jupyterlab:
+    image: jupyter/datascience-notebook:latest
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    volumes:
+      - ./notebooks:/home/jovyan/workspace
+    networks:
+      - local-stack-network
+    ports:
+      - "8000:8888"
+    command: >
+      start.sh
+      jupyter lab
+      --ServerApp.token=''
+      --ServerApp.password=''
+      --ServerApp.allow_origin='*'
+      --ServerApp.ip='0.0.0.0'
+      --ServerApp.root_dir='/home/jovyan/workspace'
