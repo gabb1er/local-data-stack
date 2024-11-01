@@ -22,11 +22,15 @@ I utilize it to test and implement innovative ideas and integrations effectively
 | WebLog Producer App |                       |                              | app-weblog-producer/docker-compose.yml |
 | TinyLLama API       |                       |                              | app-llm/docker-compose.yml             |
 
-TBD Superset, Datalens and Spark Standalone
+TODO:
+* BI: DataLens, Superset
+* Compute: Apache Spark
+* Storage: Delta Lake, Unity Catalog
+* Ingestion: Airbyte
 
 ## Architecture
 
-All services share
+All services share the same network (local-stack-network) defined in the core docker-compose.yml.
 
 ![Architecrtural](/docs/architecture.png)
 
