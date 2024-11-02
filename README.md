@@ -34,6 +34,14 @@ All services share the same network (local-stack-network) defined in the core do
 
 ![Architecrtural](/docs/architecture.png)
 
+## Applications
+
+### Weblog producer
+A simple application that produces Combined Log Format messages to kafka
+
+### LLM App
+A simple application that runs TinyLlama to provide an open ai API with the environment. GPU required
+
 ## Installation
 
 The project is origanized inside the `docker-compose.yml`, but it's highly advised to follow these steps:
